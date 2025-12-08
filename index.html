@@ -1,1 +1,201 @@
-<h1>Hello, World! GitHub Pages Test Success!</h1>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LG전자 케어 솔루션 서비스</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+        @font-face {
+            font-family: 'LG Smart';
+            /* 실제 폰트 파일 경로가 있다면 연결 */
+            src: url('LGSmart-Regular.woff2') format('woff2'); 
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'LG Smart', 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            /* 배경색을 조금 더 차분하고 모던한 그레이 톤으로 변경 */
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 420px;
+            padding: 50px 30px; /* 패딩을 조금 더 여유 있게 조정 */
+            box-sizing: border-box;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08); /* 그림자를 부드럽게 수정 */
+            border-radius: 20px; /* 모서리를 둥글게 처리 */
+            /* LG 브랜드 아이덴티티를 위한 상단 레드 포인트 바 추가 */
+            border-top: 4px solid #A50034; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: auto; /* 화면 중앙 정렬을 위해 min-height 조정 */
+            margin: 20px; /* 모바일 화면에서 여백 확보 */
+        }
+
+        /* 상단 로고 영역 (LG전자 구독 단독) */
+        .top-logo-area {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .logo-link:hover {
+            opacity: 0.8;
+        }
+
+        .logo-img {
+            height: 28px; /* 상단 로고 크기 */
+            width: auto;
+            object-fit: contain;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #111;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            word-break: keep-all; /* 단어 단위 줄바꿈 */
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 18px 0;
+            margin-bottom: 12px;
+            border-radius: 10px; /* 버튼 둥글기 조정 */
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .btn-primary {
+            background-color: #A50034; 
+            color: #ffffff;
+        }
+        .btn-primary:active {
+            background-color: #8a002b;
+            transform: translateY(1px);
+        }
+
+        .btn-secondary {
+            background-color: #4a4a4a;
+            color: #ffffff;
+        }
+        .btn-secondary:active {
+            background-color: #333333;
+            transform: translateY(1px);
+        }
+
+        /* 하단 로고 영역 (하이엠솔루텍) */
+        .bottom-logo-area {
+            margin-top: 40px; /* 버튼과의 간격 확보 */
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .bottom-logo-label {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        .logo-img-large {
+            height: 50px; /* 요청하신 대로 사이즈를 키움 (기존 30px -> 50px) */
+            width: auto;
+            object-fit: contain;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 11px;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. 상단: LG전자 구독 로고 -->
+        <div class="top-logo-area">
+            <a href="https://www.lge.co.kr/care-solutions" target="_blank" class="logo-link">
+                <img src="logo_subscribe.png" alt="LG전자 Subscribe" class="logo-img">
+            </a>
+        </div>
+
+        <h1>전문가의 꼼꼼한 위생 관리</h1>
+        <p>
+            이곳은 LG전자 케어 솔루션 전문가가<br>
+            정기적으로 관리하는 청정 구역입니다.
+        </p>
+
+        <!-- 버튼 영역 -->
+        <button class="btn btn-primary" onclick="moveToHistory()">
+            상세내역 확인하기
+        </button>
+
+        <button class="btn btn-secondary" onclick="moveToProcess()">
+            LG시스템에어컨 정품 세척 과정 보기
+        </button>
+
+        <!-- 2. 하단: 하이엠솔루텍 로고 (위치 이동 및 크기 확대) -->
+        <div class="bottom-logo-area">
+            <!-- 필요 시 '서비스 제공' 등의 텍스트를 넣을 수 있습니다 -->
+            <!-- <span class="bottom-logo-label">Service by</span> -->
+            <a href="https://himsolutek.com/" target="_blank" class="logo-link">
+                <img src="logo_hims.png" alt="하이엠솔루텍" class="logo-img-large">
+            </a>
+        </div>
+
+        <div class="footer">
+            © LG Electronics. All Rights Reserved.
+        </div>
+    </div>
+
+    <script>
+        function moveToHistory() {
+            window.location.href = "https://www.lge.co.kr/my-page/care-solution-visit-notification";
+        }
+
+        function moveToProcess() {
+            window.location.href = "https://www.nxn.kr/lgaircon-clean";
+        }
+    </script>
+
+</body>
+</html>
+
