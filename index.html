@@ -10,7 +10,7 @@
 
         @font-face {
             font-family: 'LG Smart';
-            /* 실제 폰트 파일 경로가 있다면 연결 */
+            /* 실제 폰트 파일 경로가 있다면 연결, 없으면 Noto Sans KR로 대체됨 */
             src: url('LGSmart-Regular.woff2') format('woff2'); 
             font-weight: normal;
             font-style: normal;
@@ -20,7 +20,6 @@
             font-family: 'LG Smart', 'Noto Sans KR', sans-serif;
             margin: 0;
             padding: 0;
-            /* 배경색을 조금 더 차분하고 모던한 그레이 톤으로 변경 */
             background-color: #f0f2f5;
             display: flex;
             justify-content: center;
@@ -32,21 +31,20 @@
             background-color: #ffffff;
             width: 100%;
             max-width: 420px;
-            padding: 50px 30px; /* 패딩을 조금 더 여유 있게 조정 */
+            padding: 50px 30px;
             box-sizing: border-box;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08); /* 그림자를 부드럽게 수정 */
-            border-radius: 20px; /* 모서리를 둥글게 처리 */
-            /* LG 브랜드 아이덴티티를 위한 상단 레드 포인트 바 추가 */
-            border-top: 4px solid #A50034; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-radius: 20px;
+            border-top: 4px solid #A50034; /* LG Red Point */
             display: flex;
             flex-direction: column;
             justify-content: center;
-            min-height: auto; /* 화면 중앙 정렬을 위해 min-height 조정 */
-            margin: 20px; /* 모바일 화면에서 여백 확보 */
+            min-height: auto;
+            margin: 20px;
         }
 
-        /* 상단 로고 영역 (LG전자 구독 단독) */
+        /* 상단 로고 영역 (LG전자 구독) */
         .top-logo-area {
             margin-bottom: 30px;
             display: flex;
@@ -83,7 +81,7 @@
             color: #666;
             line-height: 1.6;
             margin-bottom: 40px;
-            word-break: keep-all; /* 단어 단위 줄바꿈 */
+            word-break: keep-all;
         }
 
         .btn {
@@ -91,7 +89,7 @@
             width: 100%;
             padding: 18px 0;
             margin-bottom: 12px;
-            border-radius: 10px; /* 버튼 둥글기 조정 */
+            border-radius: 10px;
             font-size: 16px;
             font-weight: 700;
             cursor: pointer;
@@ -120,7 +118,7 @@
 
         /* 하단 로고 영역 (하이엠솔루텍) */
         .bottom-logo-area {
-            margin-top: 40px; /* 버튼과의 간격 확보 */
+            margin-top: 40px;
             margin-bottom: 10px;
             display: flex;
             justify-content: center;
@@ -135,7 +133,7 @@
         }
 
         .logo-img-large {
-            height: 50px; /* 요청하신 대로 사이즈를 키움 (기존 30px -> 50px) */
+            height: 50px; /* 하단 로고 크기 (요청 반영: 크게) */
             width: auto;
             object-fit: contain;
         }
@@ -150,7 +148,7 @@
 <body>
 
     <div class="container">
-        <!-- 1. 상단: LG전자 구독 로고 -->
+        <!-- 1. 상단: LG전자 구독 로고 (logo_subscribe.png) -->
         <div class="top-logo-area">
             <a href="https://www.lge.co.kr/care-solutions" target="_blank" class="logo-link">
                 <img src="logo_subscribe.png" alt="LG전자 Subscribe" class="logo-img">
@@ -172,10 +170,8 @@
             LG시스템에어컨 정품 세척 과정 보기
         </button>
 
-        <!-- 2. 하단: 하이엠솔루텍 로고 (위치 이동 및 크기 확대) -->
+        <!-- 2. 하단: 하이엠솔루텍 로고 (logo_hims.png) -->
         <div class="bottom-logo-area">
-            <!-- 필요 시 '서비스 제공' 등의 텍스트를 넣을 수 있습니다 -->
-            <!-- <span class="bottom-logo-label">Service by</span> -->
             <a href="https://himsolutek.com/" target="_blank" class="logo-link">
                 <img src="logo_hims.png" alt="하이엠솔루텍" class="logo-img-large">
             </a>
@@ -198,4 +194,3 @@
 
 </body>
 </html>
-
