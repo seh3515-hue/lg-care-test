@@ -45,7 +45,7 @@
 
         /* 상단 로고 영역 */
         .top-logo-area {
-            margin-bottom: 10px; 
+            margin-bottom: 15px; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -61,12 +61,12 @@
             opacity: 0.8;
         }
 
-        /* 상단 이미지 스타일 */
+        /* 상단 이미지 스타일 (정사각형 로고용 수정) */
         .logo-img {
-            width: 100%;
-            max-width: 220px;
-            height: auto;
+            width: 100px; /* 로고 크기 적당하게 고정 */
+            height: 100px;
             object-fit: contain;
+            border-radius: 50%; /* 원형으로 다듬기 (선택사항, 사각형이 좋으면 삭제 가능) */
         }
 
         h1 {
@@ -120,28 +120,26 @@
 
         /* 하단 로고 영역 */
         .bottom-logo-area {
-            margin-top: 20px; 
-            margin-bottom: 0;
+            margin-top: 25px; 
+            margin-bottom: 5px;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            line-height: 0; 
         }
         
-        /* 하단 하이엠솔루텍 이미지 스타일 */
+        /* 하단 하이엠솔루텍 이미지 스타일 (가로형 로고용 수정) */
         .logo-img-large {
-            height: 60px; 
+            height: 45px; /* 높이를 적당히 줄여서 깔끔하게 */
             width: auto;
             object-fit: contain;
-            margin: -10px 0; 
         }
 
         /* 전화번호 안내 문구 스타일 */
         .contact-text {
-            margin-top: 15px; /* 로고와의 간격 */
+            margin-top: 10px;
             font-size: 13px;
-            color: #333;
+            color: #555;
             font-weight: 700;
             letter-spacing: -0.3px;
         }
@@ -149,11 +147,11 @@
         .contact-text a {
             color: #333;
             text-decoration: none;
-            border-bottom: 1px solid #ccc; /* 번호 밑줄 */
+            border-bottom: 1px solid #ccc;
         }
 
         .footer {
-            margin-top: 10px;
+            margin-top: 15px;
             font-size: 11px;
             color: #bbb;
         }
@@ -162,10 +160,10 @@
 <body>
 
     <div class="container">
-        <!-- 1. 상단: 가전구독 이미지 -->
+        <!-- 1. 상단: LG전자 구독 로고 (변경됨) -->
         <div class="top-logo-area">
             <a href="https://www.lge.co.kr/care-solutions" target="_blank" class="logo-link">
-                <img src="https://www.lge.co.kr/kr/caresolutions/images/care-service-kv-mo.jpg" alt="LG전자 가전구독" class="logo-img">
+                <img src="https://yt3.googleusercontent.com/NyDz-JvDhVEmXR5EIg4p5KMi-E7Lzmazy7wXNBL693ZeMNHEjFZwjxheM2u49ABE6WGFh2hLhiw=s900-c-k-c0x00ffffff-no-rj" alt="LG전자 구독" class="logo-img">
             </a>
         </div>
 
@@ -183,16 +181,16 @@
             LG시스템에어컨 정품 세척 과정 보기
         </button>
 
-        <!-- 2. 하단: 하이엠솔루텍 이미지 -->
+        <!-- 2. 하단: 하이엠솔루텍 로고 (변경됨) -->
         <div class="bottom-logo-area">
             <a href="https://himsolutek.com/" target="_blank" class="logo-link">
-                <img src="https://d2juy7qzamcf56.cloudfront.net/2024-09-08/97f8aee1-60ce-42fc-95da-a47c0d6d116c.png" alt="하이엠솔루텍" class="logo-img-large">
+                <img src="https://himsolutek.com/images/main/header_himsolutek_logo_a4.png" alt="하이엠솔루텍" class="logo-img-large">
             </a>
         </div>
 
-        <!-- 3. 전화문의 문구 추가 -->
+        <!-- 3. 전화문의 문구 -->
         <div class="contact-text">
-            LG전자 구독 케어십 전화문의 <a href="tel:1544-7777">1544-7777</a>
+            LG전자 가전구독 케어십 전화문의 <a href="tel:1544-7777">1544-7777</a>
         </div>
 
         <div class="footer">
